@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="CsvSerializer\TestFiles\CsvTestModels.csv" />
+    <None Remove="CsvSerializer\TestFiles\CsvTestModelsWithHeaderNames.csv" />
+    <None Remove="CsvSerializer\TestFiles\CsvTestModelsWithNoHeaders.csv" />
+    <None Remove="CsvSerializer\TestFiles\expected\CsvTestModels.csv" />
+    <None Remove="CsvSerializer\TestFiles\expected\CsvTestModelsWithHeaderNames.csv" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="CsvSerializer\TestFiles\CsvTestModels.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CsvSerializer\TestFiles\CsvTestModelsWithHeaderNames.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CsvSerializer\TestFiles\CsvTestModelsWithNoHeaders.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CsvSerializer\TestFiles\expected\CsvTestModels.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CsvSerializer\TestFiles\expected\CsvTestModelsWithHeaderNames.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.6.1" />
+    <PackageReference Include="NUnit" Version="3.12.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.17.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Snippets.Utilities\Snippets.Utilities.csproj" />
+  </ItemGroup>
+
+</Project>
